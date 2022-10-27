@@ -1,6 +1,6 @@
 # JS-Applications
  JavaScript Applications course @ SoftUni 
-   Start date October 2022
+   <p>Starting date October 2022</p>
 
 Lectures  | Excercises
 ------------- | -------------
