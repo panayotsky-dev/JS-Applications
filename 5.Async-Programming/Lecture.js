@@ -102,3 +102,45 @@
     // }
     //
 //*Promise - е обект ,който пази състоянието на някоя асинхронна операция( Object holding state)
+
+
+//* bind е присвояване на this
+
+
+//? Promise Methods
+    //? Promise.reject(reason)
+        //? Retruns an object that is rejected with the given reason
+    //? Promise.resolve(value)
+        //? Returns an object that is resolved with the given value
+    //? Promise.all(iterable) //гърми ако 1 гръмне и успява ако всички успяват
+        //? Returns a promise
+            //? Fulfillls when all of the promises have fulfilled
+            //? Rejects as soon as one of them rejects
+    //?Promise.allSettled(iterable) // Винаги успява без значение дали всичко е окей
+        //? Wait until all promises have settled
+    //?Promise.race(iterable) // Ще успее или ще reject-не при първият който приключи и ще върне само неговият резултат
+        //? Returns a promise that fulfills or rejects as soon as one of the promises in an iterable is settled
+    //?Promise.prototype.finally() // изпълнява се за да почисти
+        //?The handler is called when the promise is settled
+
+//* What is Fetch?
+    //? The fetch() method allows making network requests // закачен за window
+    //? It is similar to XMLHttpRequest (XHR).The main difference is that the Fetch API:
+        //?Uses Promises
+        //?Enables a simpler and cleaner API
+        //?Makes code more readable and maintainable
+            // fetch('./api/some.json')
+            //  .then(function(response) {})
+            //   .catch(function(err){})
+    
+ //?Basic Fetch request
+    //? the response of a fetch() request is a Stream object
+    //?The reading of the stream happens asynchronously
+    //?When the json() method is called,a Promise is returned
+        //?The response status is checked(should be 200) before parsing the response as JSON
+        
+            // if(response.status !== 200){
+                //?handle error.
+            // }
+            // response.json()
+            // .then(function(data){console.log(data)})
