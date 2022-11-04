@@ -19,7 +19,7 @@ function wait(){
 async function start2(){
     console.log('before promise')
 
-    const value = await wait()//.then(value => console.log(value))
+    const value = await wait() //.then(value => console.log(value))
     console.log(value);
     console.log('after promise')
 }

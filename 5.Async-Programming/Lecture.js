@@ -252,3 +252,36 @@
         //     let result = await resolveAfter2Seconds();
         //     console.log(result);
         // }
+
+
+    //?Promise.then vs Async/Await
+
+        //?Promise.then
+            // function logFetch(url){
+            //     return fetch(url)
+            //     .then(response => {
+            //         return response.text()
+            //     })
+            //     .then(text => { console.log(text)})
+            //     .catch(error => { console.log(error)})
+            // }
+        //?Async/Await
+            // async function logFetch(url){
+            //     try{
+            //         const response = await fetch(url);
+            //         console.log(await response.text());
+            //     }
+            //     catch(error){
+            //         console.log(error)
+            //     }
+            // }
+        //?Error Handling
+            // async function f(){
+            //     try{
+            //         let response = await fetch();
+            //         let user = await response.json()
+            //     }
+            //     catch(error){
+            //         alert(error);
+            //     }
+            // }
