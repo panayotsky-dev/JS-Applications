@@ -212,3 +212,43 @@
         // ?    .then(json)
         // ?    .then(function(data){})
         //  ?   .catch(function(error){})
+
+
+//* ASYNC/AWAIT
+    //*Async Functions // описание на функцията е асинхронна и връща promise
+        //? Returns a promise,that can await other promises in a way that looks synchronous
+        //? Operate asynchronously via the event loop
+        //? Contains an await expression that:
+            //?is only valid inside async functions
+            //?Pauses the execution of that function
+
+        // function syncFunc(){
+        //     return 5
+        // }
+        //     syncFunc() // 5
+
+
+
+        //* async function asyncFunc(){
+        //     return 5
+        // }
+        //*     asyncFunc() //  Promise { status: "fulfilled", value: 5 }
+
+        //.temp0.then(data => data)
+        //.temp0.then(data => console.log(data)) // 5
+        //Това което печелим е възможността да използваме вторият оператор ,
+        // който е await - този оператор спира изпълнението на текущата функция и чака даден promise да бъде resolve-нат
+
+        // function resolveAfter2Seconds(){
+        //     return new Promise(resolve => {
+        //         setTimeout(() =>{
+        //             resolve('resolved')
+        //         })
+        //     })
+        // }
+
+        // async function asyncCall(){
+        //     console.log('calling');
+        //     let result = await resolveAfter2Seconds();
+        //     console.log(result);
+        // }
