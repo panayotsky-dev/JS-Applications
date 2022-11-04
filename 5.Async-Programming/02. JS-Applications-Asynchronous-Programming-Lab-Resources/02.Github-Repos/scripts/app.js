@@ -34,5 +34,6 @@ function handleData(data){
 }
 
 function handleError(error){
-	console.log(error);
+	const list = document.getElementById('repos');
+	list.textContent = error.message;
 }
