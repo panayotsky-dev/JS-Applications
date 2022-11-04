@@ -144,3 +144,71 @@
             // }
             // response.json()
             // .then(function(data){console.log(data)})
+
+//* GET Request
+    //*Fetch API uses the GET method so that a direct call would be like this
+
+    //* fetch('https://api.github.com/users/testnakov/repos')
+    //*  .then((response) => response.json())
+    //*  .then((data) => console.log(data))
+    //* .catch((error) => console.log(error))
+
+
+
+    //* Fetch заявките са GET заявки
+    //* всеки броузър връща респонсе независимо дали е успешен или не,затова преди response.json трябва да си направим един иф за проверка
+
+
+
+//*Post Request
+    //? To make a POST request,we can set the method and body parameters in the fetch() options
+
+    //  fetch('/url',{
+    //     method: 'post',
+    //     headers: {'Content-type': 'application/json'},
+    //     body: JSON.stringify(data),
+    //  })
+
+    //?
+    // .then((response) => response.json())
+    // .then((data) => console.log(data))
+    // .catch((error) => console.log(error))
+    //?
+
+    // задължително е да имаме method и body,а headers не е задължителен но е желателен.
+
+
+    //?Body Methods
+        //?clone() create a clone of the response
+        //*Body-то на респонса се консумира само веднъж и затова правим копие на респонса(clone)
+
+        //?json() resolves the promise with JSON
+
+        //?redirect() create new promise but with different URL
+
+        //?text() resolves the promise with string
+
+        //? arrayBuffer() resolve body with ArrayBuffer
+
+        //?blob() resolve body with  Blob(file,image,etc..)
+
+        //?formData() resolve body with FormData
+
+
+    //Response Types
+        //Basic - normal,same original response
+        //cors - response was received from a valid cross-origin request
+        // error- network error
+        //opaque - Response for"no-cors" request to cross-rogin resource
+        //opaqueredirect - the fetch request was made with rediect:"manual"
+
+//*Chaining Promises
+    //?When working with a JSON API ,you can:
+        //?Define the status and JSON parsing in separeate functions
+        //?The functions return promises which can be chained
+    
+        //? fetch('users.json')
+        // ?    .then(status)
+        // ?    .then(json)
+        // ?    .then(function(data){})
+        //  ?   .catch(function(error){})
