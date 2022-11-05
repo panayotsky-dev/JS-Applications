@@ -1,7 +1,7 @@
 function loadRepos() {
 	const username = document.getElementById('username').value;
 
-	fetch(`https://api.github.com/users/${username}/repos`)
+	 fetch(`https://api.github.com/users/${username}/repos`)
 	.then(handleResponse)
 	.then(handleData)
 	.catch(handleError)
