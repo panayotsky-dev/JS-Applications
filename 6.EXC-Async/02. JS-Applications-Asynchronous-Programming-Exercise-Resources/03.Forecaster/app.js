@@ -34,7 +34,7 @@ function getWeather(){
     .then(([today, threeDays]) => {
         createForeCasterToday(today)
         createForeCasterUpcoming(threeDays)
-        debugger
+        
     })
     }
     function handleError(error){
