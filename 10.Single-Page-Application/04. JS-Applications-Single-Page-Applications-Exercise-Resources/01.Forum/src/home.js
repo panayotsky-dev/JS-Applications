@@ -29,4 +29,6 @@ async function createPost(body){
     const data = await response.json()
     return data;
 }
+
+
 showDetails();
