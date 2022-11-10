@@ -52,3 +52,47 @@
   //?Only export what is necessary for consumers
   //?Prefer named exports over defaults
   //?Do not perform operations on export
+
+  //*SPA Implemention REQUIREMENTS
+    //?The applcation has multiple views
+    //? All views share a common state
+    //?Modular code is used
+    //?The page is not reloaded when changing views
+    //?Content is loaded via AJAX
+
+  //*Feasibility Disclaimer
+    //?Contemporary single-page applications employ concepts like templates and routing
+      //?Usually with a front-end framework
+
+
+      
+  //*Loading and displaying content
+    //?se the Fetch API to bring new content from the server
+    //?Modify or create new HTML elements to display content
+
+    // async function getArticles(){
+    //   const response = await fetch(apiURL);
+    //   const articles = await response.json();
+    //   articles.forEach(displayArticle);
+    // }
+    // function displayArticle(article){
+      //?Modify Dom tree
+    // }
+  //*Group DOM Changes
+    //?Manipulating the dom tree is a performance-intensive process
+    //?When multiple elements must be created and populated,place them in a DocumentFragment // Group multiple elements in a DocumentFragment
+
+    // const fragment = document.createDocumentFragment()
+          //Create and populate new elements
+    // fragment.appendChild(/*element reference*/);
+    // document.body.appendChild(fragment); // add to body
+
+    //*Слагането на съдържанието на фрагмента от документа не го копира ,а го премества!!!
+
+    //*SINGLE Page Application оперира без да презарежда цялата страница
+
+    //* Асинхронните функции хвърляйки грешка не могат да бъдат уловени от синхронни - трябва да има await!
+                          //   try{
+                          //     await login(email,password);
+                          // }catch(err){
+                          //     alert(err.message); }
