@@ -34,6 +34,19 @@ function handleData(data){
 }
 
 function handleError(error){
-	const list = document.getElementById('repos');
-	list.textContent = error.message;
+	// const list = document.getElementById('repos');
+	// list.textContent = error.message;
 }
+class rocketInfo{
+	constructor(name, fuel, type){
+		this.name = name;
+		this.fuel = fuel;
+		this.type = type;
+	}
+}
+//add new rocket with constructor
+const rocket1 = new rocketInfo('Falcon 1', 'Liquid Fuel', 'Merlin 1D');
+const rocket2 = new rocketInfo('Falcon 9', 'Liquid Fuel', 'Merlin 1D+Vacuum');
+const rocket3 = new rocketInfo('Falcon Heavy', 'Liquid Fuel', 'Merlin 1D+Vacuum');
+const rocket4 = new rocketInfo('Starship', 'Liquid Fuel', 'Raptor');
+
