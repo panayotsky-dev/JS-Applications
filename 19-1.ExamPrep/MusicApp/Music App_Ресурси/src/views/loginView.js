@@ -1,6 +1,6 @@
 import { html } from '../../node_modules/lit-html/lit-html.js'
 
-import * as authService from '../services/authService.js'
+import * as userService from '../services/userService.js'
 
 const loginTemplate = (submitHandler) => html`
 <section id="loginPage">
@@ -28,7 +28,7 @@ export const loginView = (ctx) =>{
     const submitHandler = (e)=>{
         e.preventDefault();
         const {email,password} = Object.fromEntries(new FormData(e.currentTarget))
-        authService.login(email, password)
+        userService.login(email, password)
         .then(() => {
             ctx.page.redirect('/')
     })
