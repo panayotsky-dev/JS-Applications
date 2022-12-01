@@ -12,3 +12,9 @@ export const create = (albumData) => request.post(baseUrl,albumData);
 export const edit = (albumId,albumData) => request.put(`${baseUrl}/${albumId}`, albumData)
 
 export const remove = (albumId) => request.del(`${baseUrl}/${albumId}`)
+
+export const search = (searchText) => {
+    //?where=name%20LIKE%20%22${query}%22
+    const query = encodeURIComponent(`name Like "${searchText}"`);
+    return request.get(`${baseUrl}?where=${query}`)
+}

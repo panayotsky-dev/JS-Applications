@@ -33,6 +33,12 @@ const registerTemplate = (submitHandler) => html `
                 let formData = new FormData(e.currentTarget)
                 const {email,password,['conf-pass']:repass} = Object.fromEntries(new FormData(e.currentTarget))
                 
+                if(email == '' || password == '' || repass == ''){
+                    alert('All fields are required!')
+                    return;
+                }
+
+
                     //const {email,password,['conf-pass']:repass} = Object.fromEntries(new FormData(e.currentTarget))
                 if(repass != password){
                     alert('Password missmatch')
