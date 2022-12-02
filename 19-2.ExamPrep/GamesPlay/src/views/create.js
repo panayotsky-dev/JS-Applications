@@ -36,8 +36,8 @@ async function onSubmit(ctx,data,event){
     if(Object.values(data).some(f => f == '')){
         return alert('All fields are required!')
     }
-    console.log(ctx)
-    console.log(data.title);
+    // console.log(ctx)
+    // console.log(data.title);
     await gamesService.create({
             title : data.title,
             category: data.category,
